@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: asp-net-deployment
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: asp-net-pod
+  template:
+    metadata:
+      labels:
+        app: asp-net-pod
+    spec:
+      containers:
+        - name: asp-net-pod
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}

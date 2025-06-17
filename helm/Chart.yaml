@@ -1,0 +1,5 @@
+apiVersion: v2
+name: asp.net-backend-app
+version: 1.0.0
+appVersion: "1.0.0"
+description: Helm chart for simple ASP.NET backend app

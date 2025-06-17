@@ -1,0 +1,12 @@
+replicaCount: 2
+
+image:
+  repository: "somerepo/simple-backend-app"
+  tag: v1.0.0
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 8080
+  nodePort: 30080
