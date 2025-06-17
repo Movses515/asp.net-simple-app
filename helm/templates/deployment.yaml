@@ -15,3 +15,5 @@ spec:
       containers:
         - name: asp-net-pod
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          ports:
+            - containerPort: 8080
