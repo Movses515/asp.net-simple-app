@@ -9,8 +9,9 @@ spec:
     repoURL: git@github.com:Movses515/asp.net-simple-app.git
     targetRevision: HEAD
     path: helm
-    directory:
-      recurse: true
+    helm:
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default
