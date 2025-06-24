@@ -11,7 +11,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 30))));
 
 builder.Services.AddScoped<IUserService, UserService>();
-
+builder.WebHost.UseUrls("http://0.0.0.0:8080");
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

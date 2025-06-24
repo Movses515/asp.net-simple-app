@@ -2,11 +2,10 @@ replicaCount: 2
 
 image:
   repository: "654654428802.dkr.ecr.us-east-1.amazonaws.com/asp.net.repo"
-  tag: v1.0.0
+  tag: v2.0.0
   pullPolicy: IfNotPresent
 
 service:
   type: NodePort
   port: 80
   targetPort: 8080
-  nodePort: 30080
