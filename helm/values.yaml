@@ -6,6 +6,7 @@ image:
   pullPolicy: IfNotPresent
 
 service:
-  type: NodePort
   port: 80
+  type: NodePort
   targetPort: 8080
+  name: asp-net-service
