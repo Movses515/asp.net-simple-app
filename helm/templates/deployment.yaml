@@ -6,14 +6,14 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: asp-net-pod
+      app: {{ .Values.podName }}
   template:
     metadata:
       labels:
-        app: asp-net-pod
+        app: {{ .Values.podName }}
     spec:
       containers:
-        - name: asp-net-pod
+        - name: {{ .Values.podName }}
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           ports:
             - containerPort: 8080

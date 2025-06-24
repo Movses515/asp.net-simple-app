@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: asp-net-service
+  name: {{ .Values.service.name }}
 spec:
   type: ClusterIP
   selector:
-    app: {{ .Values.service.name }}
+    app: {{ .Values.podName }}
   ports:
     - port: {{ .Values.service.port }}
       targetPort: {{ .Values.service.targetPort }}

@@ -1,4 +1,5 @@
 replicaCount: 2
+podName: asp-net-pod
 
 image:
   repository: "654654428802.dkr.ecr.us-east-1.amazonaws.com/asp.net.repo"
@@ -7,6 +8,5 @@ image:
 
 service:
   port: 80
-  type: NodePort
   targetPort: 8080
   name: asp-net-service
