@@ -32,4 +32,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.MapGet("/", () => "Health check OK");
 app.Run();
