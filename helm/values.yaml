@@ -3,7 +3,7 @@ podName: asp-net-pod
 
 image:
   repository: "654654428802.dkr.ecr.us-east-1.amazonaws.com/asp.net.repo"
-  tag: v3.0.0
+  tag: v3.0.1
   pullPolicy: IfNotPresent
 
 service:
